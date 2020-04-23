@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @testpage.name %>
+</p>
+
+<p>
+  <strong>Rank:</strong>
+  <%= @testpage.rank_id %>
+</p>
+
+<p>
+  <strong>Serial number:</strong>
+  <%= @testpage.serial_number %>
+</p>
+
+<%= link_to 'Edit', edit_testpage_path(@testpage) %> |
+<%= link_to 'Back', testpages_path %>

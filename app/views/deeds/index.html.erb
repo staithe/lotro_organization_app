@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+<%= link_to "NPC's", npcs_path(@npc) %>
+<%= link_to "Drops", drops_path(@drop) %>
+<%= link_to "Kinds", kinds_path(@kind) %>
+<%= link_to "Locations", locations_path(@location) %>
+<h1>Deeds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deeds.each do |deed| %>
+      <tr>
+        <td><%= deed.name %></td>
+        <td><%= deed.description %></td>
+        <td><%= deed.location_id %></td>
+        <td><%= link_to 'Show', deed %></td>
+        <td><%= link_to 'Edit', edit_deed_path(deed) %></td>
+        <td><%= link_to 'Destroy', deed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Deed', new_deed_path %>

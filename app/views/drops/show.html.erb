@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @drop.name %>
+</p>
+
+<p>
+  <strong>Item level:</strong>
+  <%= @drop.item_level %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @drop.description %>
+</p>
+
+<p>
+  <strong>Task item:</strong>
+  <%= @drop.task_item %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @drop.location.name %>
+</p>
+
+<%= link_to 'Edit', edit_drop_path(@drop) %> |
+<%= link_to 'Back', drops_path %>
